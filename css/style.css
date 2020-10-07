@@ -24,6 +24,7 @@ h2{
 nav li{
   display:inline;
   padding-right:20px;
+  
 
 }
 
@@ -36,6 +37,9 @@ nav a{
 /*Your Code Here*/
 /*Write selector/rule property to add an underline when
 links in the navigation are in the hover or focus state.*/
+nav a:hover, nav a:focus{
+  text-decoration: underline;
+}
 
 
 .skip a{
@@ -47,10 +51,15 @@ links in the navigation are in the hover or focus state.*/
   z-index: 1;
 
   /*Your code here*/
+  position: absolute;
+  top: -40px;
 }
 
 /*Your Code Here*/
 /*Write selector/rule property to position the skip class element*/
+.skip a:focus{
+  top:0px;
+}
 
 /*Your Code Here*/
 /*Write selector/rule property to style all elements when in focus*/
@@ -60,6 +69,7 @@ nav{
   background-color: #ddd;
   padding: 25px 0; 
   text-align: left;
+  
 }
 
 footer{
@@ -73,7 +83,10 @@ footer{
 
 
 .container{
-  /*Your Code Here*/
+  display: grid;
+  grid-row: 15px;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
 }
 
 header{
@@ -100,28 +113,29 @@ header p{
 }
 
 .about, .method, .clients, .contact{
-  /*Your Code Here*/
+  grid-column: 2 / span -1;
 
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
-  /*Your Code Here*/
-
+  grid-column: 1 / span 3;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .about, .about-image{
-   /*Your Code Here*/
+   grid-row: 2/ auto;
 
 }
 
 .method, .method-image{
-   /*Your Code Here*/
+   grid-row: 3/ auto;
 
 }
 
 
 .clients, .clients-image{
-    /*Your Code Here*/
+   grid-row: 4/ auto;
 
 }
 
@@ -147,7 +161,8 @@ background-color: rgba(255, 255, 255, .8);
   }
 
   .container{
-    /*Your code here:*/
+     grid-template-columns: 50px auto 500px auto 50px;
+     grid-template-rows:  400px 400px 400px 400px 400px;
   }
 
   .about, .clients, .method-image, .contact-image{
