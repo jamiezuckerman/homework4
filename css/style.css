@@ -67,10 +67,9 @@ nav a:hover, nav a:focus{
 
 /*Your Code Here*/
 /*Write selector/rule property to style all elements when in focus*/
-.about-image, .clients-image, .contact-image, .method-image{
-  padding-top: 2px;
+*:focus{
+  border: 2px solid #000000;
 }
-   
 
 
 nav{
@@ -90,7 +89,7 @@ footer{
 
 .container{
   display: grid;
-  grid-row: 15px;
+  grid-row-gap: 15px;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: auto auto auto auto auto;
 }
@@ -120,35 +119,35 @@ header p{
 }
 
 .about, .method, .clients, .contact{
-  grid-column: 2 / span -1;
+  grid-column: 2 / span 1;
 
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
-  grid-column: 1 / span 3;
+  grid-column: 1 / -1;
   max-height: 700px;
   overflow: hidden;
 }
 
 .about, .about-image{
-   grid-row: 2/ auto;
+   grid-row: 2/ span 1;
 
 }
 
 .method, .method-image{
-   grid-row: 3/ auto;
+   grid-row: 3/ span 1;
 
 }
 
 
 .clients, .clients-image{
-   grid-row: 4/ auto;
+   grid-row: 4/ span 1;
 
 }
 
 
 .contact, .contact-image{
-   grid-row: 5/ auto;
+   grid-row: 5/ span 1;
 
 }
 
@@ -204,4 +203,3 @@ preferences to reduce motion.*/
     background-attachment: initial;
   }
 }
-
