@@ -19,6 +19,10 @@ h1{
 h2{
   font-size: 32px;
   line-height: 1.5;
+  text-align: left
+}
+p{
+  text-align: left;
 }
 
 nav li{
@@ -63,6 +67,10 @@ nav a:hover, nav a:focus{
 
 /*Your Code Here*/
 /*Write selector/rule property to style all elements when in focus*/
+.about-image, .clients-image, .contact-image, .method-image{
+  padding-top: 2px;
+}
+   
 
 
 nav{
@@ -78,8 +86,6 @@ footer{
   padding-top: 30px;
   text-align: center;
 }
-
-
 
 
 .container{
@@ -99,6 +105,7 @@ header{
 
   /*Your Code Here*/
   /*Set background-image to header.jpg */
+  background-image: url('../images/header.jpg');
  
 
   grid-column: 1 / -1;  /*Can you explain what this does?*/
@@ -141,15 +148,16 @@ header p{
 
 
 .contact, .contact-image{
-    /*Your Code Here*/
+   grid-row: 5/ auto;
 
 }
 
 .text-block{
-background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  /*Your code here:*/
+  text-align: center;
+  align-self: center;
 
 }
 
@@ -157,7 +165,9 @@ background-color: rgba(255, 255, 255, .8);
 @media all and (min-width: 800px){
   nav{
     padding: 30px 0px;
-    /*Your code here:*/
+    text-align: right;
+    align-self: center;
+    
   }
 
   .container{
@@ -166,11 +176,11 @@ background-color: rgba(255, 255, 255, .8);
   }
 
   .about, .clients, .method-image, .contact-image{
-    /*Your code here:*/
+    grid-column: 3 / span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
-    /*Your code here:*/
+    grid-column: 2 / span 2;
   }
 }
 
@@ -194,3 +204,4 @@ preferences to reduce motion.*/
     background-attachment: initial;
   }
 }
+
